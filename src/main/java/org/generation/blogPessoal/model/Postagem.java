@@ -43,16 +43,17 @@ public class Postagem {
 
 
 	@ManyToOne
-	@JoinColumn(name = "usuario_id")
-	@JsonIgnoreProperties({"minhasPostagens"})
-	private Usuario criador;
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
 
-	public Usuario getCriador() {
-	        return criador;
+	
+
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setCriador(Usuario criador) {
-	        this.criador = criador;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 	public long getId() {
